@@ -269,8 +269,8 @@ public class AddPwActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
     }
 
-    private boolean isLinkedAccount(String accountId, String linkedAccountId) { //이미 연결된 계정인지에 대한 여부
-        SQLiteDatabase readableDB = dbHelper.getReadableDatabase(); //읽기 모드
+    private boolean isLinkedAccount(String accountId, String linkedAccountId, SQLiteDatabase readableDB) { //이미 연결된 계정인지에 대한 여부
+//        SQLiteDatabase readableDB = dbHelper.getReadableDatabase(); //읽기 모드
 
         Cursor cursor = readableDB.query(DBHelper.TABLE_LINKED_ACCOUNT   //linked_account 테이블
                 , new String[] {"count(*)"} //이미 연결된 계정인지 셈
@@ -285,7 +285,7 @@ public class AddPwActivity extends AppCompatActivity {
             }
             cursor.close();
         }
-        readableDB.close();
+//        readableDB.close();
         if(count > 0) { //1개 이상 -> 이미 연결된 계정임
             return true;
         }
@@ -316,16 +316,17 @@ public class AddPwActivity extends AppCompatActivity {
             }
             cursor.close();
         }
-        readableDB.close();
 
         accountList.forEach(accountDto -> { //가져온 account의 id와 name으로 체크박스 생성 (자기 자신 제외)
             CheckBox cb = new CheckBox(this);
             cb.setText(accountDto.getName());   //account 테이블의 name을 체크박스의 텍스트로 지정
             if(isUpdate) {  //수정을 위함이라면, 이미 연결된 계정인지 확인 -> 이미 연결된 계정이라면 체크
-                cb.setChecked(isLinkedAccount(account.getId().toString(), accountDto.getId().toString()));
+                cb.setChecked(isLinkedAccount(account.getId().toString(), accountDto.getId().toString(), readableDB));
             }
             listLinkedAccount.addView(cb);  //연결된 계정 목록에 체크박스 추가
         });
+
+        readableDB.close();
     }
 
     private boolean insertLinkedAccount() {    //연결된 계정 목록을 linked_account 테이블에 추가
@@ -339,7 +340,7 @@ public class AddPwActivity extends AppCompatActivity {
 
                 if(isUpdate) {  //수정/삭제를 위함이라면
                     //linked_account 테이블에 있는가
-                    if(isLinkedAccount(account.getId().toString(), accountList.get(i).getId().toString())) {
+                    if(isLinkedAccount(account.getId().toString(), accountList.get(i).getId().toString(), writableDB)) {
                         //언체크인가? -> delete
                         if(!cb.isChecked()) {
                             int isDeleted = writableDB.delete(
