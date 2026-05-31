@@ -1,0 +1,277 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="서비스명" />
+                <EditText
+                    android:id="@+id/accountName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="서비스명 입력" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="연동된 계정/서비스 선택" />
+                <LinearLayout
+                    android:id="@+id/listLinkedAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="url (선택)" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:rowCount="1">
+                    <EditText
+                        android:id="@+id/url"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="fill"
+                        android:hint="url 입력" />
+                    <Button
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:text="url 검사"
+                        android:id="@+id/btnCheckUrl" />
+                </GridLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/resultCheckUrl"
+                    android:text="url 검사 결과 표시 텍스트뷰" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="비밀번호" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:rowCount="1">
+                    <EditText
+                        android:id="@+id/pw"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:layout_columnSpan="2"
+                        android:layout_gravity="fill"
+                        android:hint="비밀번호 입력" />
+                    <Button
+                        android:layout_row="0"
+                        android:layout_column="2"
+                        android:text="비밀번호 검사"
+                        android:id="@+id/btnCheckPw" />
+                </GridLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/resultCheckPw"
+                    android:text="비밀번호 검사 결과 표시 텍스트뷰" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="가입일/비밀번호 마지막 변경일 (선택)" />
+                <DatePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:id="@+id/lastChangedDate"/>
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="권장 비밀번호 변경 주기 (선택)" />
+                <EditText
+                    android:id="@+id/changeCycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="권장 비밀번호 변경 주기 (개월)" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <LinearLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:minHeight="?attr/minTouchTargetSize"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:text="메모 (선택)" />
+                <EditText
+                    android:id="@+id/memo"
+                    android:lines="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+            <Button
+                android:id="@+id/btnAddPw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="비밀번호 추가" />
+            <GridLayout
+                android:id="@+id/layoutBtnUpdateDeletePw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="1"
+                android:columnCount="2">
+                <Button
+                    android:id="@+id/btnUpdatePw"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_marginRight="8dp"
+                    android:text="비밀번호 수정" />
+                <Button
+                    android:id="@+id/btnDeletePw"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:text="비밀번호 삭제" />
+            </GridLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                style="?attr/materialDividerHeavyStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationAddPw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu" />
+</LinearLayout>

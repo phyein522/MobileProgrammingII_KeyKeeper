@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_activity_main"
+        android:enabled="true"
+        android:icon="@drawable/list_white"
+        android:title="비밀번호 관리"/>
+    <item
+        android:id="@+id/page_activity_add_pw"
+        android:enabled="true"
+        android:icon="@drawable/edit_white"
+        android:title="비밀번호 추가"/>
+    <item
+        android:id="@+id/page_activity_account_list"
+        android:enabled="true"
+        android:icon="@drawable/customer_white"
+        android:title="계정 목록"/>
+    <item
+        android:id="@+id/page_activity_pw_list"
+        android:enabled="true"
+        android:icon="@drawable/checklist_white"
+        android:title="비밀번호 목록"/>
+<!--    android:icon="@drawable/ic_star"-->
+</menu>

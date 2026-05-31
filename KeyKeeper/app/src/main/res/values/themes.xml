@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KeyKeeper" parent="Theme.Material3.Light">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <!-- example -->
+        <item name="colorPrimary">@color/cosmic_ink</item>
+        <item name="colorPrimaryVariant">@color/deep_sky</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorOnSurface">#000000</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+
+        <item name="colorOutline">@color/black</item>
+
+        <item name="materialDividerStyle">@style/Widget.App.MaterialDivider</item>
+        <item name="materialDividerHeavyStyle">@style/Widget.App.MaterialDivider.Heavy</item>
+
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+        <item name="materialCardViewStyle">@style/Widget.App.MaterialCardView</item>
+    </style>
+
+    <style name="Theme.KeyKeeper" parent="Base.Theme.KeyKeeper" />
+
+    <style name="Widget.App.MaterialDivider" parent="Widget.Material3.MaterialDivider">
+<!--        <item name="dividerColor">@color/black</item>-->
+        <item name="dividerThickness">1dp</item>
+    </style>
+
+    <style name="Widget.App.MaterialDivider.Heavy" parent="Widget.Material3.MaterialDivider.Heavy">
+        <item name="dividerColor">@color/my_light_gray</item>
+    </style>
+
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/deep_sky</item>
+        <item name="titleTextColor">#FFFFFF</item>
+        <item name="navigationIconTint">#FFFFFF</item>
+    </style>
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/deep_sky</item>
+        <item name="itemIconTint">#FFFFFF</item>
+        <item name="itemTextColor">#FFFFFF</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Material3Expressive.BottomNavigationView.ActiveIndicator</item>
+    </style>
+    <style name="Widget.Material3Expressive.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/cosmic_ink</item>
+    </style>
+
+    <style name="Widget.App.MaterialCardView" parent="Widget.Material3.CardView.Outlined">
+<!--        <item name="cardBackgroundColor">@color/card_background_checked</item>-->
+        <item name="cardForegroundColor">@color/card_background_checked</item>
+<!--        <item name="android:foregroundTint">@color/card_background_checked</item>-->
+    </style>
+</resources>

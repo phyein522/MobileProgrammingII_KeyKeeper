@@ -1,0 +1,178 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="32dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/cardAccountName"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="accountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="3">
+            <TextView
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="연동 계정" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:id="@+id/cardListLinkedAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill"
+                android:layout_marginVertical="16dp" />
+            <TextView
+                android:layout_row="2"
+                android:layout_column="0"
+                android:text="url" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp">
+                <TextView
+                    android:id="@+id/cardUrl"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill"
+                android:layout_marginVertical="16dp" />
+            <TextView
+                android:layout_row="4"
+                android:layout_column="0"
+                android:text="비밀번호" />
+            <Button
+                android:id="@+id/cardPw"
+                android:padding="16dp"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="비밀번호 보기" />
+        </GridLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="3">
+            <TextView
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="마지막 비밀번호 변경일" />
+            <TextView
+                android:id="@+id/cardLastChangedDate"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill"
+                android:layout_marginVertical="16dp" />
+            <TextView
+                android:layout_row="2"
+                android:layout_column="0"
+                android:text="비밀번호 변경 주기" />
+            <TextView
+                android:id="@+id/cardChangeCycle"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"/>
+        </GridLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp" />
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="3">
+            <TextView
+                android:layout_row="0"
+                android:layout_column="0"
+                android:text="메모" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp">
+                <TextView
+                    android:id="@+id/cardMemo"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_gravity="fill"
+                android:layout_marginVertical="16dp" />
+            <TextView
+                android:layout_row="2"
+                android:layout_column="0"
+                android:text="알림" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:layout_margin="8dp">
+                <LinearLayout
+                    android:id="@+id/cardListWarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
