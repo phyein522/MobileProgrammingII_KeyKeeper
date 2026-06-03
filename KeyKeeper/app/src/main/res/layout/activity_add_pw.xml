@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceSubtitle1"
-                    android:text="연동된 계정/서비스 선택" />
+                    android:text="연결된 계정/서비스 선택" />
                 <LinearLayout
                     android:id="@+id/listLinkedAccount"
                     android:layout_width="match_parent"
